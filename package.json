@@ -10,10 +10,11 @@
     "/dist/src"
   ],
   "scripts": {
-    "watch": "tsc --watch",
     "build": "tsc && ts-node bundle-css.ts",
+    "lint": "python3 grep-lint.py",
+    "watch": "tsc --watch",
     "watch-css": "ts-node bundle-css.ts --watch",
-    "test": "mocha",
+    "test": "npm run lint && mocha",
     "debug-tests": "mocha --inspect-brk",
     "prepublish": "rm -rf dist && npm run build && npm run test"
   },
