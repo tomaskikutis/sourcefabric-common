@@ -1,8 +1,8 @@
 :root {
-	--sfc-color-primary: red;
+	--sfc-color-primary: black;
 	--sfc-color-text: black;
 	--sfc-carousel-border-radius: 0px;
-	--sfc-carousel-background-color: black;
+	--sfc-carousel-background-color: rgba(0, 0, 0, 0.8);
 }
 
 .p-carousel-prev,
