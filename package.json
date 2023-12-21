@@ -14,8 +14,8 @@
     "lint": "python3 grep-lint.py",
     "watch": "tsc --watch",
     "watch-css": "ts-node bundle-css.ts --watch",
-    "test": "npm run lint && mocha",
-    "debug-tests": "mocha --inspect-brk",
+    "test": "npm run lint && TZ=utc mocha",
+    "debug-tests": "TZ=utc mocha --inspect-brk",
     "prepublish": "rm -rf dist && npm run build && npm run test"
   },
   "devDependencies": {

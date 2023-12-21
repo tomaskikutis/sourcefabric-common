@@ -27,7 +27,7 @@ describe('time.getTimeStringIso', () => {
     it('with timezone', () => {
         assert.equal(
             getTimeStringIso(new Date('Thu Jan 01 1970 13:14 GMT+0500')),
-            '09:14',
+            '08:14',
         );
     });
 });
