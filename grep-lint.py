@@ -1,8 +1,8 @@
 import subprocess
 import sys
 
-def get_command(branch=None):
-    arguments_list = ["git", "grep", "-P", rule_regex]
+def get_command():
+    arguments_list = ["git", "grep", "-P", rule_regex, ":(exclude)grep-lint.py"]
 
     return arguments_list
 
