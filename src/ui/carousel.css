@@ -246,10 +246,14 @@ this is set to prevent the buttons from going
 over the images */
 .sd-thumb-carousel__btn--prev,
 .p-carousel-prev {
+	position: relative;
+	right: -10px;
 	margin-right: -51px;
 }
 
 .sd-thumb-carousel__btn--next,
 .p-carousel-next {
+	position: relative;
+	left: -10px;
 	margin-left: -51px;
 }
