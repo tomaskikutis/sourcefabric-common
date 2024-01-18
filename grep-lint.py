@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 def get_command():
-    arguments_list = ["git", "grep", "-P", rule_regex, ":(exclude)grep-lint.py"]
+    arguments_list = ["git", "grep", "-P", rule_regex, ":(exclude)grep-lint.py", ":(exclude)*.jpg"]
 
     return arguments_list
 

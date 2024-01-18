@@ -172,6 +172,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 8px;
+	list-style: none;
 }
 
 .p-carousel-indicator {
@@ -187,6 +188,7 @@
 	height: 8px;
 	transition: all 0.2s ease;
 	border-radius: 9999px;
+	border-style: none;
 	opacity: 0.2;
 	background-color: var(--sfc-color-primary);
 	padding: 0;
@@ -213,6 +215,7 @@
 	opacity: 0.8;
 	transition: all 0.2 ease !important;
 	color: rgba(44, 50, 58, 0.6);
+	border-style: solid;
 }
 
 .p-carousel-prev:hover,

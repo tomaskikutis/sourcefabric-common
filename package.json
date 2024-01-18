@@ -9,6 +9,9 @@
   "files": [
     "/dist/src"
   ],
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "build": "tsc && ts-node bundle-css.ts",
     "lint": "python3 grep-lint.py",
@@ -16,9 +19,18 @@
     "watch-css": "ts-node bundle-css.ts --watch",
     "test": "npm run lint && TZ=utc mocha",
     "debug-tests": "TZ=utc mocha --inspect-brk",
-    "prepublish": "rm -rf dist && npm run build && npm run test"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.9",
+    "@storybook/addon-interactions": "^7.6.9",
+    "@storybook/addon-links": "^7.6.9",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.9",
+    "@storybook/react": "^7.6.9",
+    "@storybook/react-vite": "^7.6.9",
+    "@storybook/test": "^7.6.9",
     "@types/enzyme-adapter-react-16": "1.0.6",
     "@types/lodash": "^4.14.117",
     "@types/mocha": "9.1.1",
@@ -31,14 +43,17 @@
     "jsdom": "20.0.0",
     "jsdom-global": "3.0.2",
     "mocha": "8.4.0",
+    "primeicons": "^6.0.1",
+    "storybook": "^7.6.9",
     "superdesk-code-style": "^1.5.0",
     "ts-node": "10.9.1",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "vite": "^4.5.1"
   },
   "dependencies": {
-    "primereact": "^10.0.9",
     "date-fns": "2.7.0",
     "lodash": "4.17.19",
+    "primereact": "^6.0.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-sortable-hoc": "^1.11.0"
