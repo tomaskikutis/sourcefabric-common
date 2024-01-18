@@ -20,7 +20,7 @@
     "test": "npm run lint && TZ=utc mocha",
     "debug-tests": "TZ=utc mocha --inspect-brk",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "npm run build && storybook build"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.9",
