@@ -7,7 +7,7 @@ const meta: Meta<typeof Carousel> = {
   component: Carousel,
   decorators: [
     (Story) => (
-      <div style={{width: 500}}>
+      <div style={{width: 300}}>
         <Story />
       </div>
     ),
