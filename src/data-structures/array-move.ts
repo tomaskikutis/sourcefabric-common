@@ -3,10 +3,7 @@
  * Does not mutate the original array.
  */
 export function arrayMove<T>(arr: Array<T>, from: number, to: number): Array<T> {
-    if (
-        from < 0 || from > arr.length - 1
-        || to < 0 || to > arr.length - 1
-    ) {
+    if (from < 0 || from > arr.length - 1 || to < 0 || to > arr.length - 1) {
         console.error('Out of range.');
         return arr;
     }

@@ -29,9 +29,7 @@ export class WithSortable<T> extends React.PureComponent<IProps<T>> {
                 render() {
                     const Template = this.props.itemTemplate;
 
-                    return (
-                        <Template item={this.props.item} />
-                    );
+                    return <Template item={this.props.item} />;
                 }
             },
         );
@@ -43,16 +41,14 @@ export class WithSortable<T> extends React.PureComponent<IProps<T>> {
 
                     return (
                         <div>
-                            {
-                                items.map((item, i) => (
-                                    <SortableItem
-                                        key={props.getId(item)}
-                                        index={i}
-                                        item={item}
-                                        itemTemplate={props.itemTemplate}
-                                    />
-                                ))
-                            }
+                            {items.map((item, i) => (
+                                <SortableItem
+                                    key={props.getId(item)}
+                                    index={i}
+                                    item={item}
+                                    itemTemplate={props.itemTemplate}
+                                />
+                            ))}
                         </div>
                     );
                 }
@@ -63,8 +59,6 @@ export class WithSortable<T> extends React.PureComponent<IProps<T>> {
     render() {
         const {SortableList} = this;
 
-        return (
-            <SortableList items={this.props.items} {...this.props.options} />
-        );
+        return <SortableList items={this.props.items} {...this.props.options} />;
     }
 }

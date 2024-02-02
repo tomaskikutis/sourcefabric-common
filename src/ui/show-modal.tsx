@@ -18,12 +18,7 @@ export const showModal = (
         el.remove();
     };
 
-    ReactDOM.render(
-        (
-            <Component closeModal={closeModal} />
-        ),
-        el,
-    );
+    ReactDOM.render(<Component closeModal={closeModal} />, el);
 
     return Promise.resolve();
 };

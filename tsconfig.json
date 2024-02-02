@@ -4,5 +4,5 @@
         "target": "ES5",
         "declaration": true,
         "outDir": "./dist",
-    }
+    },
 }
