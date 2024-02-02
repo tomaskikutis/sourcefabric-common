@@ -4,7 +4,7 @@ import {Carousel as PRCarousel} from 'primereact/carousel';
 interface IState {
     height?: number;
 }
-type IImage = {src: string, alt?: string};
+type IImage = {src: string; alt?: string};
 
 interface IProps {
     images: Array<IImage>;
@@ -14,16 +14,9 @@ export class Carousel extends React.PureComponent<IProps, IState> {
     render() {
         const imageTemplate = (image: IImage) => {
             return (
-                <div
-                    className="sd-thumb-carousel__item"
-                >
-                    <div
-                        className="sd-thumb-carousel__item-inner"
-                    >
-                        <img
-                            src={image.src}
-                            alt={image.alt}
-                        />
+                <div className="sd-thumb-carousel__item">
+                    <div className="sd-thumb-carousel__item-inner">
+                        <img src={image.src} alt={image.alt} />
                     </div>
                 </div>
             );
