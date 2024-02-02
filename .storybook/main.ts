@@ -1,4 +1,5 @@
 import type {StorybookConfig} from '@storybook/react-vite';
+import prettierConfig from '../.prettierrc';
 
 const config: StorybookConfig = {
     stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -8,7 +9,14 @@ const config: StorybookConfig = {
         '@storybook/addon-essentials',
         '@storybook/addon-onboarding',
         '@storybook/addon-interactions',
-        '@storybook/addon-storysource',
+        {
+            name: '@storybook/addon-storysource',
+            options: {
+                loaderOptions: {
+                    prettierConfig: prettierConfig,
+                },
+            },
+        },
     ],
     framework: {
         name: '@storybook/react-vite',
