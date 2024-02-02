@@ -20,6 +20,7 @@
         "test": "npm run lint && TZ=utc mocha --exit",
         "debug-tests": "TZ=utc mocha --inspect-brk",
         "storybook": "storybook dev -p 6006",
+        "format-code": "prettier --write .",
         "build-storybook": "npm run build && storybook build"
     },
     "devDependencies": {
