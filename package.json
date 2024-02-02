@@ -44,7 +44,6 @@
         "glob": "^10.3.10",
         "jsdom": "20.0.0",
         "jsdom-global": "3.0.2",
-        "lint-staged": "^15.2.1",
         "mocha": "8.4.0",
         "prettier": "3.2.4",
         "primeicons": "^6.0.1",
