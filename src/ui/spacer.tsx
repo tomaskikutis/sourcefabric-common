@@ -38,16 +38,20 @@ export class Spacer extends React.PureComponent<IPropsSpacer> {
                     ...(this.props.style ?? {}),
                 }}
             >
-                {this.props.children.map((el, i) => noWrap ? el : (
-                    <div
-                        key={i}
-                        style={{
-                            width: noGrow === true ? undefined : '100%',
-                        }}
-                    >
-                        {el}
-                    </div>
-                ))}
+                {this.props.children.map((el, i) =>
+                    noWrap ? (
+                        el
+                    ) : (
+                        <div
+                            key={i}
+                            style={{
+                                width: noGrow === true ? undefined : '100%',
+                            }}
+                        >
+                            {el}
+                        </div>
+                    ),
+                )}
             </div>
         );
     }
