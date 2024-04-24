@@ -22,7 +22,12 @@ const files: Array<string> = globSync(cssFilesGlobPattern);
 function bundle(): Promise<void> {
     console.info('CSS bundling started');
     return Promise.all(
-        files.map((_path) => readFilePromisified(toAbsolutePath(_path)).then((contents) => ({file: _path, contents}))),
+        files.map((_path) =>
+            readFilePromisified(toAbsolutePath(_path)).then((contents) => ({
+                file: _path,
+                contents,
+            })),
+        ),
     ).then((result) => {
         const bundledStr: string = result.map(({file, contents}) => `/** ${file} */\n${contents}`).join('\n\n\n');
 

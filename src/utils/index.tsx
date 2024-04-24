@@ -9,7 +9,7 @@ export function mapObject<T extends {[key: string]: any}, V>(
     const result: {[key: string]: V} = {};
 
     for (const key of Object.keys(obj)) {
-        result[key] = mapFn((obj[key]));
+        result[key] = mapFn(obj[key]);
     }
 
     return result as {[Property in keyof T]: V};

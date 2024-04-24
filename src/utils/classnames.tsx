@@ -1,7 +1,9 @@
 /* eslint-disable no-redeclare */
 
 function getActiveClassNames(obj: {[className: string]: boolean}): Array<string> {
-    return Object.entries(obj).filter(([_key, value]) => value === true).map(([key]) => key);
+    return Object.entries(obj)
+        .filter(([_key, value]) => value === true)
+        .map(([key]) => key);
 }
 
 // overloads:

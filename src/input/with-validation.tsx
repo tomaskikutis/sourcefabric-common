@@ -48,7 +48,9 @@ interface IState<T> {
 }
 
 export class WithValidation<T> extends React.PureComponent<IPropsValidationHoc<T>, IState<T>> {
-    private trackVisibility: {[Property in keyof IValidatorsForType<T>]: React.RefObject<any>};
+    private trackVisibility: {
+        [Property in keyof IValidatorsForType<T>]: React.RefObject<any>;
+    };
 
     constructor(props: IPropsValidationHoc<T>) {
         super(props);
